@@ -6,12 +6,11 @@ public class BinaryTreeMaximumPath {
     public static void main(String[] args) {
 
         // Build the tree
-        TreeNode root = new TreeNode(-10);
-        root.left = new TreeNode(9);
-        root.right = new TreeNode(20);
+        TreeNode root = new TreeNode(5);
+        root.left = new TreeNode(-7);
+        root.right = new TreeNode(6);
 
-        root.right.left = new TreeNode(15);
-        root.right.right = new TreeNode(7);
+        root.left.left = new TreeNode(2);
 
         BinaryTreeMaximumPath sol = new BinaryTreeMaximumPath();
 
