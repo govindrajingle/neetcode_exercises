@@ -5,3 +5,5 @@ This repository tracks the problems I have solved while practicing data structur
 | Binary Tree Maximum Path Sum | https://leetcode.com/problems/binary-tree-maximum-path-sum/ | 1                   |
 | Search 2D matrix             | https://leetcode.com/problems/search-a-2d-matrix/           | 1                   |
 | Maximum subarray (Kadane's)  | https://leetcode.com/problems/maximum-subarray/             | 1                   |
+| Two Sum                      | https://leetcode.com/problems/two-sum/                      | 1                   |
+| Pacific Atlantic Water Flow  | https://leetcode.com/problems/pacific-atlantic-water-flow/  | 1                   |
