@@ -8,3 +8,4 @@ This repository tracks the problems I have solved while practicing data structur
 | Two Sum                      | https://leetcode.com/problems/two-sum/                      | 1                   |
 | Pacific Atlantic Water Flow  | https://leetcode.com/problems/pacific-atlantic-water-flow/  | 1                   |
 | Single Number                | https://leetcode.com/problems/single-number/                | 1                   |
+| Time based key value store   | https://leetcode.com/problems/time-based-key-value-store/   | 1                   |
