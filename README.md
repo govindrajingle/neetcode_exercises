@@ -9,3 +9,4 @@ This repository tracks the problems I have solved while practicing data structur
 | Pacific Atlantic Water Flow  | https://leetcode.com/problems/pacific-atlantic-water-flow/  | 1                   |
 | Single Number                | https://leetcode.com/problems/single-number/                | 1                   |
 | Time based key value store   | https://leetcode.com/problems/time-based-key-value-store/   | 1                   |
+| Merge K sorted lists         | https://leetcode.com/problems/merge-k-sorted-lists/         | 1                   |
