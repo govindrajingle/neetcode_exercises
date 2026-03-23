@@ -14,51 +14,39 @@ public class AddTwoNumbers {
     public static void main(String[] args) {
         ListNode l1 = new ListNode(2);
         l1.next = new ListNode(4);
-        l1.next.next = new ListNode(9);
+        l1.next.next = new ListNode(3);
 
         // List 2: 1
         ListNode l2 = new ListNode(5);
         l2.next = new ListNode(6);
         l2.next.next = new ListNode(4);
-        l2.next.next.next = new ListNode(9);
+        // l2.next.next.next = new ListNode(9);
 
-        ListNode result = new ListNode(-1);
-        int sum = 0;
-        sum = getNumber(l1) + getNumber(l2);
-        // System.out.println("Sum is: " + sum);
-        // int rev = reverseNum(sum);
-        // System.out.println("Reverse num is: " + rev);
-        ListNode dummy = result;
-        if (sum == 0)
-            System.out.println(new ListNode(0));
-        while (sum > 0) {
-            int digit = sum % 10;
-            ListNode temp = new ListNode(digit);
-            dummy.next = temp;
-            dummy = dummy.next;
-            sum /= 10;
-        }
-        System.out.println(result.next);
+        ListNode result = addTwoNumbers(l1, l2);
+        System.out.println(result);
     }
 
-    public static int reverseNum(int num) {
-        int rev = 0;
-        while (num > 0) {
-            rev = rev * 10 + num % 10;
-            num /= 10;
-        }
-        return rev;
-    }
-
-    public static int getNumber(ListNode root) {
-        int num = 0;
-        ListNode current = root;
-        while (current != null) {
-            num = num * 10 + current.val;
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        int carry = 0;
+        ListNode dummy = new ListNode(-1);
+        ListNode current = dummy;
+        while (l1 != null || l2 != null) {
+            if (l1 != null) {
+                carry += l1.val;
+                l1 = l1.next;
+            }
+            if (l2 != null) {
+                carry += l2.val;
+                l2 = l2.next;
+            }
+            ListNode temp = new ListNode(carry % 10);
+            carry /= 10;
+            current.next = temp;
             current = current.next;
         }
-        return num;
+        return dummy.next;
     }
+
 }
 
 class ListNode {

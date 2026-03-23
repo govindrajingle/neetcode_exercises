@@ -11,3 +11,4 @@ This repository tracks the problems I have solved while practicing data structur
 | Time based key value store   | https://leetcode.com/problems/time-based-key-value-store/   | 1                   |
 | Merge K sorted lists         | https://leetcode.com/problems/merge-k-sorted-lists/         | 1                   |
 | Task Scheduler               | https://leetcode.com/problems/task-scheduler/               | 1                   |
+| Add two numbers              | https://leetcode.com/problems/add-two-numbers/              | 1                   |
