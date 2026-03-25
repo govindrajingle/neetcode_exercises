@@ -1,48 +1,55 @@
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 public class EncodeDecode {
+
     public static void main(String[] args) {
-        List<String> strs = new ArrayList<>();
-        strs.addAll(Arrays.asList("hello&smith", "bottle", "sun"));
-        String encoded = encode(strs);
+        String[] strs = { "tv96", "np0", "eVHgP!", "I0", "Oeu8VIuWKJ", "0" };
+
+        EncodeDecode obj = new EncodeDecode();
+
+        String encoded = obj.encode(strs);
         System.out.println("Encoded String: " + encoded);
-        List<String> decoded = decode(encoded);
-        System.out.println("Decoded String: " + decoded);
+
+        String[] decoded = obj.decode(encoded);
+
+        // Proper way to print array
+        System.out.println("Decoded String: " + Arrays.toString(decoded));
     }
 
-    public static String encode(List<String> strs) {
+    int totalWords = 0;
+
+    public String encode(String s[]) {
+        // write your logic to encode the strings
         StringBuilder sb = new StringBuilder();
-        for (String str : strs) {
-            int strLength = str.length();
-            sb.append(strLength).append("#").append(str);
+        totalWords = s.length;
+        for (String word : s) {
+            int size = word.length();
+            sb.append(size);
+            sb.append("#");
+            sb.append(word);
         }
         return sb.toString();
     }
 
-    public static List<String> decode(String encodedString) {
-        List<String> data = new ArrayList<>();
-        int i = 0;
-
-        while (i < encodedString.length()) {
-            // Step 1: find '#'
-            int j = i;
-            while (encodedString.charAt(j) != '#') {
-                j++;
+    public String[] decode(String encoded) {
+        String[] messages = new String[totalWords];
+        // write your logic to decode the string
+        int wordLength = 0, index = 0;
+        for (int i = 0; i < encoded.length(); i++) {
+            char ch = encoded.charAt(i);
+            StringBuilder sb = new StringBuilder();
+            if (Character.isDigit(ch)) {
+                wordLength = wordLength * 10 + Integer.parseInt(ch + "");
+            } else {
+                // Skip #
+                i += 1;
+                sb.append(encoded.substring(i, wordLength + i));
+                i += wordLength - 1;
+                messages[index] = sb.toString();
+                wordLength = 0;
+                index += 1;
             }
-
-            // Step 2: get length
-            int length = Integer.parseInt(encodedString.substring(i, j));
-
-            // Step 3: extract string
-            String str = encodedString.substring(j + 1, j + 1 + length);
-            data.add(str);
-
-            // Step 4: move pointer
-            i = j + 1 + length;
         }
-
-        return data;
+        return messages;
     }
 }
