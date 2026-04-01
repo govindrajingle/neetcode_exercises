@@ -1,47 +1,48 @@
 import java.util.ArrayList;
-import java.util.List;
 
 public class NumberOfConnectedComponents {
     public static void main(String[] args) {
         int[][] arr = { new int[] { 0, 2 }, new int[] { 3, 4 }, new int[] { 1, 2 } };
         int v = 5;
-        List<List<Integer>> components = getComponents(arr, v);
+        ArrayList<ArrayList<Integer>> components = new NumberOfConnectedComponents().getComponents(v, arr);
+        printGraph(components);
     }
 
-    public static List<List<Integer>> getComponents(int[][] edges, int v) {
-        // Create graph ds to store bidirectional edges
-        List<List<Integer>> graph = new ArrayList<>();
-        // Intitally this will be empty
-        for (int i = 0; i < v; i++) {
+    public ArrayList<ArrayList<Integer>> getComponents(int V, int[][] edges) {
+        ArrayList<ArrayList<Integer>> result = new ArrayList<>();
+        ArrayList<ArrayList<Integer>> graph = new ArrayList<>();
+
+        for (int i = 0; i < V; i++) {
             graph.add(new ArrayList<>());
         }
-        // Add bidirectional edges
-        for (int i = 0; i < edges.length; i++) {
-            // one direction
-            graph.get(edges[i][0]).add(edges[i][1]);
-            // reverse direction
-            graph.get(edges[i][1]).add(edges[i][0]);
-        }
-        // printGraph(graph);
 
-        List<List<Integer>> result = new ArrayList<>();
-        boolean[] visited = new boolean[v];
-        for (int i = 0; i < v; i++) {
-            int vertex = i;
+        // Build graph correctly
+        for (int i = 0; i < edges.length; i++) {
+            int u = edges[i][0];
+            int v = edges[i][1];
+
+            graph.get(u).add(v);
+            graph.get(v).add(u);
+        }
+
+        boolean[] visited = new boolean[V];
+
+        for (int i = 0; i < V; i++) {
             if (!visited[i]) {
-                List<Integer> component = new ArrayList<>();
-                dfs(vertex, graph, visited, component);
+                ArrayList<Integer> component = new ArrayList<>();
+                dfs(i, graph, visited, component);
                 result.add(component);
             }
         }
-        printGraph(result);
+
         return result;
     }
 
-    private static void dfs(int vertex, List<List<Integer>> graph, boolean[] visited,
-            List<Integer> component) {
+    public void dfs(int vertex, ArrayList<ArrayList<Integer>> graph,
+            boolean[] visited, ArrayList<Integer> component) {
         visited[vertex] = true;
         component.add(vertex);
+
         for (int neighbor : graph.get(vertex)) {
             if (!visited[neighbor]) {
                 dfs(neighbor, graph, visited, component);
@@ -49,9 +50,9 @@ public class NumberOfConnectedComponents {
         }
     }
 
-    private static void printGraph(List<List<Integer>> graph) {
+    private static void printGraph(ArrayList<ArrayList<Integer>> graph) {
         int i = 0;
-        for (List<Integer> list : graph) {
+        for (ArrayList<Integer> list : graph) {
             System.out.print(i + "<->" + list);
             i += 1;
             System.out.println();
