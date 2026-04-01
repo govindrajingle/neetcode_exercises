@@ -22,3 +22,5 @@ This repository tracks the problems I have solved while practicing Data Structur
 | 12  | Merge K Sorted Lists         | https://leetcode.com/problems/merge-k-sorted-lists/                | 001    |
 | 13  | Task Scheduler               | https://leetcode.com/problems/task-scheduler/                      | 001    |
 | 14  | Meeting Rooms                | https://www.geeksforgeeks.org/problems/attend-all-meetings/1       | 001    |
+| 15  | No of connected components   | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/  | 001    |
+
