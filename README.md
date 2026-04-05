@@ -24,3 +24,4 @@ This repository tracks the problems I have solved while practicing Data Structur
 | 14  | Meeting Rooms                | https://www.geeksforgeeks.org/problems/attend-all-meetings/1                         | 001    |
 | 15  | No of connected components   | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | 001    |
 | 16  | Lowest Common Ancestor (BST) | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/        | 001    |
+| 17  | Min Cost of Climbing Stairs  | https://leetcode.com/problems/min-cost-climbing-stairs/description/                  | 001    |
