@@ -25,3 +25,5 @@ This repository tracks the problems I have solved while practicing Data Structur
 | 15  | No of connected components   | https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/ | 001    |
 | 16  | Lowest Common Ancestor (BST) | https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/        | 001    |
 | 17  | Min Cost of Climbing Stairs  | https://leetcode.com/problems/min-cost-climbing-stairs/description/                  | 001    |
+| 18  | Merge Two Sorted Linked List | https://leetcode.com/problems/merge-two-sorted-lists/description/                    | 001    |
+| 19  | Reverst Linked List          | https://leetcode.com/problems/reverse-linked-list/description/                       | 001    |
