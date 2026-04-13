@@ -6,7 +6,7 @@ public class RandomQuestionNeetcode {
     public static void main(String[] args) {
         int start = 1,
                 end = 150;
-        int[] excludeNumbers = { 4, 5, 9, 30, 34, 37, 38, 41, 45, 53, 56, 60, 63, 69, 86, 101, 109, 123, 134, 145 };
+        int[] excludeNumbers = { 4, 5, 9, 30, 34, 37, 38, 41, 45, 53, 56, 60, 63, 69, 76, 86, 101, 109, 123, 134, 145 };
         Random rand = new Random();
         int result;
 
