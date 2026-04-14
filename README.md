@@ -27,4 +27,5 @@ This repository tracks the problems I have solved while practicing Data Structur
 | 17  | Min Cost of Climbing Stairs  | https://leetcode.com/problems/min-cost-climbing-stairs/description/                  | 001    |
 | 18  | Merge Two Sorted Linked List | https://leetcode.com/problems/merge-two-sorted-lists/description/                    | 001    |
 | 19  | Reverst Linked List          | https://leetcode.com/problems/reverse-linked-list/description/                       | 001    |
-| 19  | Minimum Window Substring     | https://leetcode.com/problems/minimum-window-substring/                              | 001    |
+| 20  | Minimum Window Substring     | https://leetcode.com/problems/minimum-window-substring/                              | 001    |
+| 21  | Spiral Matrix                | https://leetcode.com/problems/spiral-matrix/                                         | 001    |
